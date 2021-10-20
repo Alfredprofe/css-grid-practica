@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #0f0827;
+    color: #fdafdd;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body main h1 {
+    box-sizing: border-box;
+    margin: 2rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+body main .grid {
+    border: 2px solid #fadfaf;
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-areas: "header header header" "sidebar1 contenido sidebar2" "sidebar1 widgets sidebar2" "footer footer footer";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+body main .grid div {
+    align-items: center;
+    background: #0faaff;
+    color: #121212;
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+body main .grid .header {
+    background: #ff8000;
+    grid-column-start: header;
+    grid-column-end: header;
+}
+
+body main .grid .sidebar1 {
+    background: #393e46;
+    /* grid-column-start: sidebar1;
+    grid-column-end: sidebar1;
+    grid-row-start: sidebar1;
+    grid-row-end: sidebar1; */
+
+    /* grid-column: sidebar1;
+    grid-row: sidebar1; */
+
+    grid-area: sidebar1;
+}
+
+body main .grid .contenido {
+    background: #fff;
+    color: #121212;
+    grid-area: contenido;
+}
+
+body main .grid .widgets {
+    background: #ff8000;
+    grid-area: widgets;
+}
+
+body main .grid .sidebar2 {
+    background: #3030e3;
+    grid-area: sidebar2;
+}
+
+body main .grid .footer {
+    background: #92ee99;
+    grid-area: footer;
+}
